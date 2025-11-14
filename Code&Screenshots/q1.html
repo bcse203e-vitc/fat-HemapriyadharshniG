@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Water consumed: <input type="number" id="water" required><br><br>
+    <input type="submit"><br><br>
+    Cost to be paid is Rs. 450 only.
+
+    <script>
+        function calculateBill(){
+        var $water=$document.getElementbyID("water");
+        var $cost;
+        if($water<=15){
+            $cost=50+(2*$water);
+            document.write($cost);
+        } 
+        else if($water>15 && $water<=20 && $water<35){
+            $cost=50+(5*$water);
+            document.write($cost);
+        }
+        else if($water>35){
+            $cost=50+(10*$water);
+            document.write($cost);
+        }
+    }
+    if(submit.onclick()) {
+        calculateBill();
+    }
+    </script>
+</body>
+</html>
